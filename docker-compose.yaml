@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  influxdb:
+    image: influxdb:1.7.10
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      INFLUXDB_DB: f1aGPIA22aSANmaRc0
+      INFLUXDB_ADMIN_ENABLED: "true"
+      INFLUXDB_ADMIN_USER: admin
+      INFLUXDB_ADMIN_PASSWORD: uiggsan54nfa112kfcnau
+    volumes:
+      - influxdb_data:/var/lib/influxdb
+
+volumes:
+  influxdb_data:
